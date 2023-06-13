@@ -1,21 +1,19 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="container"
+      onPointerMove={(e) => {
+        setX(e.clientX);
+        setY(e.clientY);
+      }}
+    >
+      <div className="pointer" style={{ transform: `translate(${x}px, ${y}px)` }}></div>
     </div>
   );
 }
