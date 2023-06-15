@@ -4,7 +4,8 @@ import './index.css';
 // import App from './App';
 
 import reportWebVitals from './reportWebVitals';
-import AppForm from './AppForm';
+import AppTheme from './AppTheme';
+// import AppForm from './AppForm';
 // import AppMentorsImmer from './AppMentorsImmer';
 // import AppMentors from './AppMentors';
 // import AppMentor from './AppMentor';
@@ -12,7 +13,7 @@ import AppForm from './AppForm';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppForm />
+    <AppTheme />
   </React.StrictMode>,
 );
 
